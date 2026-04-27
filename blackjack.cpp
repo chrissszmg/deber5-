@@ -54,6 +54,11 @@ while (jugador1.getPuntos () < 21 ) {
    char option;
 cout << "Pedir carta (p) o Plantarse (s)?" << endl;
 cin >>option;
+    //Validacion de inputs
+    if (option != 'p' && option != 's') {
+    cout << "Opcion invalida. Intenta de nuevo." << endl;
+    continue;
+}
 if (option == 'p') {
     int carta = Generar ( mazo );
     jugador1.sumarPuntos ( carta );
