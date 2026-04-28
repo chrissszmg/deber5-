@@ -1,8 +1,8 @@
 
-# include < iostream > // cout , cin
-# include < string > // string
-# include < cstdlib > // rand () , srand ()
-# include < ctime > // time ()
+# include <iostream> // cout , cin
+# include <string> // string
+# include <cstdlib> // rand () , srand ()
+# include <ctime> // time ()
 using namespace std ;
 
 class Jugador {
@@ -44,9 +44,12 @@ srand ( time (0) ) ;
 
 Jugador jugador1 ( "Jugador 1" , 0 );
 int n = Generar ( mazo );
+    vector <int> cartas;
+      cartas.push_back(n);
 jugador1.sumarPuntos ( n );
 jugador1.mostrar();
 int n1 = Generar ( mazo );
+      cartas.push_back(n1);
 jugador1.sumarPuntos ( n1 );
 jugador1.mostrar();
 cout << "Tus cartas: " << n << " , " << n1 << endl;
